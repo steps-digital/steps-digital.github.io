@@ -269,8 +269,17 @@
       border: 1px dashed rgba(232, 165, 75, 0.35);
       color: var(--text);
       font-size: 0.98rem;
+      line-height: 1.65;
     }
     .merke-boks strong { color: var(--accent-2); }
+    .merke-boks p { margin: 0 0 0.65rem; color: var(--text); }
+    .merke-boks p:last-child { margin-bottom: 0; color: var(--muted); }
+    .lenke-hint {
+      margin: 0.65rem 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
     .prosjekt-visning {
       min-height: 280px;
       background:
@@ -402,31 +411,32 @@
     <section class="seksjon arbeid" id="arbeid">
       <div class="wrap">
         <h2>Utvalgt arbeid</h2>
-        <p class="seksjon-ingress">Her er et prosjekt jeg jobber med nå. Flere eksempler kommer etter hvert.</p>
+        <p class="seksjon-ingress">Her er et forsideforslag jeg jobber med nå. Poenget er utseende og førsteinntrykk – ikke et ferdig nettsted ennå.</p>
 
         <article class="prosjekt">
           <div class="prosjekt-tekst">
-            <span class="status">Under arbeid · forslag</span>
+            <span class="status">Kun forside · under arbeid</span>
             <h3>Hjelperne</h3>
             <p>
-              Nettside for en nyoppstartet ungdomsbedrift som tilbyr praktisk hjelp i hjemmet
+              Forslag til forside for en nyoppstartet ungdomsbedrift som tilbyr praktisk hjelp i hjemmet
               (snømåking, mathandling, bærehjelp med mer).
             </p>
             <div class="merke-boks">
-              <strong>Viktig:</strong> Denne siden er under arbeid og er et forslag til en kunde
-              som holder på å bestemme seg for om de vil kjøpe et helt nettsted.
-              Den er ikke en ferdig, lansert bedriftsside ennå.
+              <p><strong>Dette er bare forsiden</strong> – laget for å vise et ryddig, attraktivt utseende som vekker interesse.</p>
+              <p>De fleste knappene fører ikke videre ennå, fordi undersidene ikke er laget. Kunden vurderer fortsatt om de vil bestille et komplett nettsted.</p>
             </div>
             <div style="margin-top:auto;padding-top:1rem;">
               <a class="knapp knapp--primar" href="https://torsteinclaude-coder.github.io/hjelperne/" target="_blank" rel="noopener noreferrer">
-                Åpne Hjelperne-forslaget
+                Åpne Hjelperne-forsiden
               </a>
+              <p class="lenke-hint">Forhåndsvisning av design – ikke en ferdig nettside med alle sider klare.</p>
             </div>
           </div>
-          <div class="prosjekt-visning" aria-hidden="true">
+          <div class="prosjekt-visning">
             <p class="navn">Hjelperne</p>
-            <p class="tag">Hjelp når du trenger det</p>
-            <a class="knapp knapp--sekundar" href="https://torsteinclaude-coder.github.io/hjelperne/" target="_blank" rel="noopener noreferrer" tabindex="-1">Se live forhåndsvisning</a>
+            <p class="tag">Forsideforslag · utseende og førsteinntrykk</p>
+            <a class="knapp knapp--sekundar" href="https://torsteinclaude-coder.github.io/hjelperne/" target="_blank" rel="noopener noreferrer">Se forhåndsvisning</a>
+            <p class="lenke-hint" style="color:rgba(255,255,255,0.65);">Få knapper virker – undersidene mangler fortsatt.</p>
           </div>
         </article>
       </div>
