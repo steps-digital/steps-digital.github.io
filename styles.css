@@ -317,9 +317,23 @@ h2 .serif { font-size: 1.1em; }
 .steg:nth-child(4) .steg-nr { transform: translateY(-9px); background: var(--accent); color: #fff; }
 .steg h3 { margin: 0.1rem 0 0.25rem; font-size: 1.15rem; letter-spacing: -0.02em; }
 .steg p { margin: 0; color: var(--ink-2); font-size: 0.98rem; }
-.hvorfor-bilde { position: relative; margin: 0; border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4 / 5; }
-.hvorfor-bilde img { width: 100%; height: 100%; object-fit: cover; }
-.hvorfor-bilde figcaption {
+.knapp--hvorfor { margin-top: 1.75rem; }
+.hvorfor-bilde {
+  position: relative;
+  display: block;
+  margin: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 5;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hvorfor-bilde:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -18px rgba(16, 24, 40, 0.35); }
+.hvorfor-bilde img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; }
+.hvorfor-bilde:hover img { transform: scale(1.05); }
+.hvorfor-bildetekst {
+  display: block;
   position: absolute;
   left: 1.25rem;
   right: 1.25rem;
@@ -332,7 +346,21 @@ h2 .serif { font-size: 1.1em; }
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.98rem;
 }
-.hvorfor-bilde figcaption strong { display: block; color: #fff; font-size: 1.2rem; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+.hvorfor-bildetekst strong { display: block; color: #fff; font-size: 1.2rem; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+.les-mer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.les-mer svg { width: 16px; height: 16px; transition: transform 0.2s; }
+.hvorfor-bilde:hover .les-mer svg { transform: translateX(4px); }
 
 /* Arbeid */
 .prosjekt {
