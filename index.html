@@ -8,20 +8,21 @@
   <meta name="theme-color" content="#12141a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #12141a;
       --bg-2: #1a1d27;
       --panel: #222633;
       --text: #eef0f5;
-      --muted: #9aa3b5;
+      --muted: #b4bbc8;
       --accent: #e8a54b;
       --accent-2: #f0c27a;
       --line: rgba(255, 255, 255, 0.08);
       --ok: #6ecf9a;
-      --font: "Outfit", system-ui, sans-serif;
-      --display: "Syne", system-ui, sans-serif;
+      /* Atkinson Hyperlegible er laget for god lesbarhet */
+      --font: "Atkinson Hyperlegible", "Source Sans 3", system-ui, sans-serif;
+      --display: "Source Sans 3", "Atkinson Hyperlegible", system-ui, sans-serif;
       --max: 1080px;
       --radius: 18px;
     }
@@ -36,8 +37,10 @@
         radial-gradient(ellipse 60% 40% at 100% 0%, rgba(90, 120, 255, 0.08), transparent 50%),
         var(--bg);
       color: var(--text);
-      line-height: 1.55;
-      font-size: 1.05rem;
+      line-height: 1.65;
+      font-size: 1.125rem;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
     a { color: var(--accent-2); }
@@ -128,10 +131,10 @@
     }
     h1 {
       font-family: var(--display);
-      font-weight: 800;
-      font-size: clamp(2.4rem, 6vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+      font-weight: 700;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
       margin: 0 0 1rem;
     }
     .ingress {
@@ -139,6 +142,7 @@
       color: var(--muted);
       margin: 0 0 2rem;
       max-width: 36rem;
+      line-height: 1.7;
     }
     .handlinger { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
@@ -172,9 +176,11 @@
     .seksjon { padding: 4rem 0; }
     .seksjon h2 {
       font-family: var(--display);
-      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
-      letter-spacing: -0.02em;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
       margin: 0 0 0.6rem;
+      line-height: 1.25;
     }
     .seksjon-ingress {
       color: var(--muted);
@@ -248,9 +254,11 @@
     }
     .prosjekt h3 {
       font-family: var(--display);
-      font-size: 1.8rem;
+      font-size: 1.7rem;
+      font-weight: 700;
       margin: 0;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
     }
     .prosjekt p { margin: 0; color: var(--muted); }
     .merke-boks {
@@ -311,11 +319,11 @@
     .telefon {
       display: inline-block;
       font-family: var(--display);
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      font-weight: 800;
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      font-weight: 700;
       color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.02em;
       margin: 0.75rem 0 1.25rem;
     }
     .telefon:hover { color: var(--accent-2); }
