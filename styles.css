@@ -406,6 +406,9 @@ h2 .serif { font-size: 1.1em; }
   transition: transform 0.4s;
 }
 .prosjekt-logo:hover img { transform: scale(1.04); }
+.prosjekt-logo--foto { padding: 0; overflow: hidden; }
+.prosjekt-logo--foto img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: 0; box-shadow: none; }
+.prosjekt + .prosjekt { margin-top: 2rem; }
 .status {
   display: inline-flex;
   align-items: center;
@@ -586,6 +589,8 @@ a.kontaktvalg-rad:hover { border-color: var(--accent); transform: translateX(4px
   .prosjekt { grid-template-columns: 1fr; padding: 1.25rem; }
   .prosjekt-logo { aspect-ratio: auto; }
   .prosjekt-logo img { width: min(100%, 240px); }
+  .prosjekt-logo--foto { aspect-ratio: 3 / 2; }
+  .prosjekt-logo--foto img { width: 100%; }
   .hvorfor-bilde { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 720px) {
