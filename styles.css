@@ -365,7 +365,7 @@ h2 .serif { font-size: 1.1em; }
 /* Arbeid */
 .prosjekt {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 2.5rem;
   align-items: center;
   background: var(--surface);
@@ -373,11 +373,39 @@ h2 .serif { font-size: 1.1em; }
   border-radius: 30px;
   padding: 2rem;
 }
-.nettleser { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: #fff; }
-.nettleser-topp { display: flex; align-items: center; gap: 6px; padding: 0.7rem 0.9rem; background: #f4f1ec; border-bottom: 1px solid var(--line); }
-.nettleser-topp span { width: 10px; height: 10px; border-radius: 50%; background: #ddd5ca; }
-.nettleser-topp .adresse { margin-left: 0.75rem; flex: 1; height: auto; width: auto; border-radius: 8px; background: #fff; font-size: 0.75rem; color: var(--ink-3); padding: 0.2rem 0.7rem; }
-.nettleser img { width: 100%; height: auto; }
+.prosjekt-oppfordring {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 1.4rem 1.6rem;
+  border-radius: 20px;
+  background: var(--accent-soft);
+  border: 1.5px solid rgba(224, 54, 44, 0.25);
+}
+.prosjekt .prosjekt-oppfordring p { margin: 0; color: var(--ink); font-size: 1.2rem; line-height: 1.4; max-width: 34rem; }
+.prosjekt-logo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  background: #e9f1ec;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.prosjekt-logo:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.prosjekt-logo img {
+  width: min(100%, 320px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 18px 40px -18px rgba(0, 54, 31, 0.45);
+  transition: transform 0.4s;
+}
+.prosjekt-logo:hover img { transform: scale(1.04); }
 .status {
   display: inline-flex;
   align-items: center;
@@ -393,7 +421,6 @@ h2 .serif { font-size: 1.1em; }
 @keyframes puls { 0% { box-shadow: 0 0 0 0 rgba(224, 54, 44, 0.5); } 100% { box-shadow: 0 0 0 9px rgba(224, 54, 44, 0); } }
 .prosjekt h3 { font-size: 2rem; letter-spacing: -0.04em; margin: 1rem 0 0.6rem; line-height: 1.1; }
 .prosjekt p { color: var(--ink-2); margin: 0 0 1rem; }
-.merknad { font-size: 0.92rem; padding: 0.9rem 1rem; border-radius: 14px; background: var(--bg); border: 1px dashed var(--line); }
 
 /* Kontakt */
 .kontakt-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: start; }
@@ -556,7 +583,9 @@ a.kontaktvalg-rad:hover { border-color: var(--accent); transform: translateX(4px
   .hero-grid, .prosess-grid, .kontakt-grid, .delt { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-visuell { min-height: 440px; }
   .tjenester { grid-template-columns: repeat(2, 1fr); }
-  .prosjekt { grid-template-columns: 1fr; }
+  .prosjekt { grid-template-columns: 1fr; padding: 1.25rem; }
+  .prosjekt-logo { aspect-ratio: auto; }
+  .prosjekt-logo img { width: min(100%, 240px); }
   .hvorfor-bilde { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 720px) {
