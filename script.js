@@ -23,10 +23,6 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.vis').forEach((el) => el.classList.add('synlig'));
 }
 
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('video[autoplay]').forEach((v) => v.pause());
-}
-
 document.querySelectorAll('[data-kopier]').forEach((knapp) => {
   knapp.addEventListener('click', async () => {
     try {
